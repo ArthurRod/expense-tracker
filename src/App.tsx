@@ -8,6 +8,7 @@ import { Category } from "./types/Category";
 import { getCurrentMonth, filterListByMonth } from "./helpers/dateFilter";
 
 import { TableArea } from "./components/TableArea";
+import { InfoArea } from "./components/InfoArea";
 
 function App() {
   const [list, setList] = useState(items);
@@ -24,6 +25,7 @@ function App() {
         <C.HeaderText>Sistema financeiro</C.HeaderText>
       </C.Header>
       <C.Main>
+        <InfoArea currentMonth={currentMonth} />
         <TableArea list={filteredList} />
       </C.Main>
     </C.Container>
